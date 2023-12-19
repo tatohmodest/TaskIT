@@ -1,0 +1,942 @@
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Comic Sans MS, Comic Sans, cursive
+}
+
+/* Apply a background color and some padding to the body */
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    padding: 20px;
+
+}
+/* my body animation */
+
+/* ending of animation */
+
+
+  /* side bar styling */
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: rgb(85, 75, 72);
+    cursor: pointer;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  #menubar{
+    cursor: pointer;
+  }
+
+
+.hero{
+  
+}
+.profile {
+    text-align:justify;
+    padding-top: 50px;
+    display: block;
+    border-color: #333;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.profile img {
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+
+/* Style the header and navigation */
+header {
+    position: fixed; /* Fix the header to the top of the screen */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left */
+    width: 100%; /* Occupy full width */
+    background-color: #333; /* Set the background color */
+    color: #fff; /* Set the text color */
+    padding: 10px 0; /* Add padding to the header */
+    z-index: 1000; /* Ensure it's on top of other content */
+  }
+  
+  nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align items vertically */
+  }
+  
+  h1 {
+    margin: 0; /* Remove margin */
+  }
+  
+  ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for layout */
+  }
+  
+  li {
+    margin-right: 20px; /* Add margin between list items */
+  }
+  
+  a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Set link color */
+    transition: color 0.3s; /* Add transition for smooth hover effect */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #ffd700; /* Change link color on hover */
+  }
+  
+
+
+
+/* Style the main content area */
+main {
+    margin-top: 20px;
+}
+
+.tasking h1{
+    text-align: center; /* Center the h1 within its container */
+    margin-bottom: 50px; /* Add margin to separate it from the rest of the content */
+  }
+
+.task-form, .task-list {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-form h2, .task-list h2 {
+    margin-bottom: 10px;
+}
+
+.task-form form input, .task-form form textarea, .task-form form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.task-form form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.task-form form button:hover {
+    background-color: #555;
+
+}
+
+.task-list ul {
+    list-style: none;
+}
+
+.task-list ul li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+#tax1{
+    background-image: url('/pics/bg4.png');
+}
+#tax2{
+    background-image: url('/pics/yes.png');
+}
+#tax3{
+    background-image: url('/pics/ps1.png');
+}
+#tax4{
+    background-image: url('/pics/ps2.png');
+}
+
+/* box area for checking */
+.task-prompt {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    
+}
+
+.prompt-box {
+    flex: 0 0 45%; /* Adjust the width as needed */
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0; /* Remove the bottom margin to align them in a row */
+   
+    width: 500px;
+    height: 254px;
+    padding-right: 59px;
+    text-align: center;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1px;
+    background: #fff;
+   
+}
+#box1{
+    background-image: url('/pics/bg3.png');
+}
+#box2{
+  background-image: url('/pics/background1.png');
+ 
+}
+
+.prompt-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.prompt-box p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.prompt-box button {
+    width: 130px;
+ height: 40px;
+ font-size: 1.1em;
+ cursor: pointer;
+ background-color: #171717;
+ color: #fff;
+ border: none;
+ border-radius: 5px;
+ transition: all .4s;
+}
+
+.prompt-box button:hover {
+    border-radius: 5px;
+ transform: translateY(-10px);
+ box-shadow: 0 7px 0 -2px #f85959,
+  0 15px 0 -4px #39a2db,
+  0 16px 10px -3px #39a2db;
+}
+
+.prompt-box button:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #f85959,
+     0 8px 0 -4px #39a2db,
+     0 12px 10px -3px #39a2db;
+   }
+/* end of box */
+
+/* slide sides */
+.task-types {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+
+.task-type-box {
+    flex: 0 0 20%;
+    width: 240px;
+    height: 254px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    background: #fff;
+    border-radius: 20px;
+   
+}
+.task-type-box:hover{
+    transform: scale(1.05);
+    border: 1px solid black;
+    width: 250px;
+    height: 258px;
+    transition: 0.2s ease;
+}
+
+.task-type-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.task-type-box p {
+    color: #666;
+}
+@keyframes boxes {
+    0% {animation-duration: 5s;
+    animation-direction: alternate;
+   animation-duration: 2s;}
+    
+}
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+    
+    .profile {
+      text-align: center;
+      padding-top: 20px;
+    }
+  
+    .profile img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    body {
+        font-family: Arial, sans-serif;
+        background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        padding: 5%;
+        max-width: 100%; /* Ensure the body doesn't exceed the full width of the viewport */
+    }
+    
+    /* Adjust the width and max-width of the containers for responsiveness */
+    .hero {
+        width: 100%;
+        max-width: 100%; /* Ensure the hero section doesn't exceed the full width of the viewport */
+    }
+    
+    .profile {
+        width: 100%;
+        max-width: 100%; /* Ensure the profile section doesn't exceed the full width of the viewport */
+        text-align: center; /* Update text alignment for responsiveness */
+        padding-top: 20px;
+    }
+    
+  }
+
+
+.taskadder {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+    padding: 60px;
+    background: lightblue;
+    display: none;
+    order: -1;
+    transition: display 0.3s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+}
+.taskadder button {
+    width: 130px;
+ height: 40px;
+ font-size: 1.1em;
+ cursor: pointer;
+ background-color: #171717;
+ color: #fff;
+ border: none;
+ border-radius: 5px;
+ transition: all .4s;
+}
+
+.taskadder button:hover {
+    border-radius: 5px;
+ transform: translateY(-10px);
+ box-shadow: 0 7px 0 -2px #f85959,
+  0 15px 0 -4px #39a2db,
+  0 16px 10px -3px #39a2db;
+}
+
+.taskadder button:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #f85959,
+     0 8px 0 -4px #39a2db,
+     0 12px 10px -3px #39a2db;
+   }
+  
+.taskview{    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+    padding: 60px;
+    background: lightblue;
+    display: none;
+    order: -1;
+    transition: display 0.3s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+}
+
+
+
+
+/* option bar */
+.selecting {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+        padding: 20px;
+        background: lightblue;
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        max-width: 70%;
+        border-radius: 5px;
+        border: 2px solid var(--main-color);
+        box-shadow: 4px 4px var(--main-color);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color:var(--bg-color);
+    color:var(--main-color);
+    padding: 1em 3em;
+    border-radius: 1em;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color:var(--bg-color);
+    color: var(--main-color);
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color:var(--main-color);
+    transform: translateX(-50%);
+  }
+  select {
+
+    /* styling */
+    background-color:var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+  
+    /* reset */
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  
+  /* arrows */
+  
+  select {
+    background-image:
+      linear-gradient(45deg, transparent 50%, var(--main-color) 50%),
+      linear-gradient(135deg, var(--main-color) 50%, transparent 50%),
+      linear-gradient(to right, skyblue, skyblue);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5em 2.5em;
+    background-repeat: no-repeat;
+  }
+  
+  select:focus {
+    background-image:
+      linear-gradient(45deg, white 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, white 50%),
+      linear-gradient(to right, gray, gray);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5em 2.5em;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+  }
+
+
+  .Myform {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+    padding: 20px;
+    background: lightblue;
+    display: none;
+    order: -1;
+    transition: display 0.3s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+  }
+  
+  .title {
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .title span {
+    color: var(--font-color-sub);
+    font-weight: 600;
+    font-size: 17px;
+  }
+  
+  .input {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+  
+  .input:focus {
+    border: 2px solid var(--input-focus);
+  }
+
+  
+  .button-confirm {
+    margin: 50px auto 0 auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+  }
+/* ending taskbar sty */
+ 
+
+h1 {
+    text-align: center;
+}
+
+.list{
+    padding-bottom: 20px;
+    background: lightblue;
+    display: block;
+    height:max-content;
+    width: 700px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+  }
+  
+button {
+    padding: 8px 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+#taskview li {
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: 200;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #f4f4f4;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#taskview li button{
+    padding:30 20px 0 12px ;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    outline: none;
+  }
+  
+  #taskview li button:hover {
+    background-color: #23c483;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  li button:active {
+    transform: translateY(-1px);
+  }
+    
+  li input {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }
+  
+  li input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+  
+  li input:focus {
+    border: 2px solid var(--input-focus);
+  }
+  @keyframes floatUpAndFade {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+}
+
+li {
+  position: relative;
+}
+
+.task-checkbox {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+  justify-content: flex-end;
+  left:300px;
+  top:20;
+}
+
+.complete-text {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid black;
+  animation: floatUpAndFade 3s forwards;
+}
+.added-text {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid black;
+    animation: floatUpAndFade 3s forwards;
+  }
+  
+
+
+
+
+/* Style the footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 100%; /* Occupy full width on smaller screens */
+        padding-top: 20px; /* Adjust top padding */
+        height: auto; /* Allow the height to adjust based on content */
+    }
+
+    .sidebar a {
+        padding: 8px 8px; /* Adjust padding for smaller screens */
+        font-size: 18px; /* Decrease font size for smaller screens */
+    }
+
+    .sidebar .closebtn {
+        right: 15px; /* Adjust position of close button */
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+
+    #main {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+    .profile {
+        text-align: center; /* Update text alignment for responsiveness */
+        padding-top: 20px; /* Adjust top padding */
+        margin-bottom: 10px; /* Adjust margin for smaller screens */
+    }
+
+    .profile img {
+        width: 40px; /* Decrease image width for smaller screens */
+        height: 40px; /* Decrease image height for smaller screens */
+        margin-bottom: 5px; /* Adjust margin for smaller screens */
+    }
+
+    .profile h2 {
+        font-size: 18px; /* Decrease font size for smaller screens */
+    }
+    .taskadder, .taskview {
+        padding: 20px; /* Adjust padding for smaller screens */
+        width: 90%; /* Occupy a larger width on smaller screens */
+    }
+
+    .taskadder button {
+        width: 100px; /* Adjust button width for smaller screens */
+        height: 30px; /* Adjust button height for smaller screens */
+        font-size: 1em; /* Decrease font size for smaller screens */
+    }
+    .selecting {
+        padding: 10px; /* Adjust padding for smaller screens */
+        max-width: 90%; /* Occupy a larger width on smaller screens */
+    }
+
+    .tooltip {
+        padding: 0.5em 2em; /* Adjust padding for smaller screens */
+    }
+
+    .tooltip .tooltiptext {
+        width: 150px; /* Adjust width for smaller screens */
+        padding: 8px; /* Adjust padding for smaller screens */
+        bottom: 110%; /* Adjust position for smaller screens */
+    }
+    .Myform {
+        padding: 10px; /* Adjust padding for smaller screens */
+        width: 90%; /* Occupy a larger width on smaller screens */
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+
+    .title {
+        font-size: 18px; /* Decrease font size for smaller screens */
+        margin-bottom: 15px; /* Adjust margin for smaller screens */
+    }
+
+    .title span {
+        font-size: 15px; /* Decrease font size for smaller screens */
+    }
+
+    .input {
+        width: 200px; /* Adjust input width for smaller screens */
+        height: 30px; /* Adjust input height for smaller screens */
+        font-size: 13px; /* Decrease font size for smaller screens */
+        padding: 3px 8px; /* Adjust padding for smaller screens */
+    }
+
+    .button-confirm {
+        margin: 30px auto 0 auto; /* Adjust margin for smaller screens */
+        width: 100px; /* Adjust button width for smaller screens */
+        height: 30px; /* Adjust button height for smaller screens */
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Decrease font size for smaller screens */
+    }
+
+    .list {
+        width: 90%; /* Occupy a larger width on smaller screens */
+    }
+    /* Add a media query for responsive button, ul, #taskview li, and li input */
+
+    button {
+        padding: 6px 12px; /* Adjust padding for smaller screens */
+    }
+
+    #taskview li {
+        font-size: 13px; /* Decrease font size for smaller screens */
+        margin-bottom: 8px; /* Adjust margin for smaller screens */
+        padding: 6px; /* Adjust padding for smaller screens */
+    }
+
+    #taskview li button {
+        padding: 25px 16px 0 10px; /* Adjust padding for smaller screens */
+        font-size: 10px; /* Decrease font size for smaller screens */
+        margin-top: 8px; /* Adjust margin for smaller screens */
+    }
+
+    li input {
+        width: 200px; /* Adjust input width for smaller screens */
+        height: 30px; /* Adjust input height for smaller screens */
+        font-size: 13px; /* Decrease font size for smaller screens */
+        padding: 4px 8px; /* Adjust padding for smaller screens */
+    }
+    li {
+        position: static; /* Change position to static for smaller screens */
+    }
+
+    .task-checkbox {
+        position: static; /* Change position to static for smaller screens */
+        margin-right: 0; /* Remove margin for smaller screens */
+        justify-content: flex-start; /* Adjust alignment for smaller screens */
+        left: 0; /* Reset left position for smaller screens */
+        top: 0; /* Reset top position for smaller screens */
+    }
+
+    .complete-text,
+    .added-text {
+        position: static; /* Change position to static for smaller screens */
+        top: 0; /* Reset top position for smaller screens */
+        right: 0; /* Reset right position for smaller screens */
+    }
+
+    footer {
+        margin-top: 10px; /* Adjust margin for smaller screens */
+    }}
+
+
+
+
+
+

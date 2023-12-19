@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <div id="mySidebar" class="sidebar">
+            <!--the nav bar-->
+              <span class="material-symbols-outlined closebtn" onclick="closeSidebar()">
+                  close
+                  </span>
+            <a href="#">Home</a>
+            <a href="random.html">Name Generator</a>
+            <a href="#">Management</a>
+            <a href="#">Settings</a>
+          </div>
+          
+          <div id="main">
+          <span id="menubar" onclick="openSidebar()" class="material-symbols-outlined">
+              menu
+              </span> 
+          </div>
+    </header>
+
+    <main class="hero">
+
+        <section class="profile">
+            <img src="/pics/person.jpg" alt="User Image">
+            <p>Hello,<span id="name"><strong>Wilton</strong></span></p>
+            <h1>Lets Set Up your Task</h1>
+        </section>
+        
+       
+        
+        <section class="task-prompt">
+            
+            <div class="prompt-box" id="box1">
+                <span class="material-symbols-outlined">
+                    add_task
+                    </span>
+                <h2>Add Task</h2>
+                <p>Click below to add a new task</p>
+                <button id="button1">Add Task</button>
+             
+            </div>
+            
+    
+<div class="selection">
+    <div class="selecting">
+
+        <div class="tooltip">
+            <label for="task">What type of Task Do you Want to Do?</label>
+            <div class="tooltiptext">Select Task Type</div>
+        </div><br/>
+        <select name="task" id="taskTypeSelect">
+            <option value="schooltask">School Task</option>
+            <option value="worktask">Work Task</option>
+            <option value="gym">Gym</option>
+            <option value="sport">Sport</option>
+            <option value="home">Home</option>
+            <option value="traveling">Traveling</option>
+            <option value="personal">Personal</option>
+
+            <!-- Add more options as needed -->
+        </div>
+        <button id="pro">Let's Task it</button>
+    </div>
+
+</div>
+
+<div id="taskForm">
+
+    <form id="myForm" class="Myform">
+        <h1>Task Management System</h1>
+        <div class="title">Hello,<br><span>Input Your Task</span></div>
+        <input class="input" name="text" id="taskInput" placeholder="Enter your task" type="text">  
+        <button class="button-confirm" type="button" id="confirm" onclick="addTask()">Add Task → </button>
+        <ul>
+            <li id="added"></li>
+        </ul>
+    </form>
+    <br/>
+   
+</div>
+
+    </section>
+            <div class="prompt-box" id="box2">
+                <span class="material-symbols-outlined">
+                    manage_accounts
+                    </span>
+                <h2>View & Manage Tasks</h2>
+                <p>Click below to view and manage your tasks</p>
+                <button id="button2">View Tasks</button>
+            </div>
+            <div class="taskview" id="taskview">
+                <h3>Task Manager</h3>
+                
+                <div id="view">
+                   <ul id="listview">
+                       
+                   </ul>
+                </div>
+               </div>
+        </section>
+
+
+        <!--for the slide bar task-->
+        <section class="tasking">
+            <h1>You Can create example task like: </h1>
+            <div class="task-types">
+                <div class="task-type-box" id="tax1">
+                    <span class="material-symbols-outlined">
+                        settings_accessibility
+                        </span>
+                    <h3>Personal</h3>
+                    <p>Tasks related to personal activities</p>
+                    
+                </div>
+                <div class="task-type-box" id="tax2">
+                    <span class="material-symbols-outlined">
+                        work
+                        </span>
+                    <h3>Work</h3>
+                    <p>Tasks related to work or professional activities</p>
+                </div>
+                <div class="task-type-box" id="tax3">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                        </span>
+                    <h3>Shopping</h3>
+                    <p>Tasks related to shopping and errands</p>
+                </div>
+                <div class="task-type-box" id="tax4">
+                    <span class="material-symbols-outlined">
+                        school
+                        </span>
+                    <h3>Educational</h3>
+                    <p>Tasks related to education or learning</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+   
+
+       
+       
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Task Manager App by Modest Wilton</p>
+    </footer>
+</body>
+</html>
+
