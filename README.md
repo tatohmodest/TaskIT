@@ -25,7 +25,8 @@ This repository contains the code for a task management app designed to help use
 - Add new tasks by entering the task details and clicking "Add Task"
 - Mark tasks as complete by clicking the checkbox
 - Remove tasks by clicking the delete button
-
+## Screenshot
+![Screenshot](ipadmini.png)
 ## Credits
 
 This app was created by Tatoh Modest
