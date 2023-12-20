@@ -55,7 +55,7 @@ function addTask() {
         var newDate = new Date();
         var dateString = newDate.toISOString().replace('T', ' ').replace(/\.\d{3}Z$/, '');
         var li = document.createElement('li');
-        var textNode = document.createTextNode(taskInput + " - " + dateString + " - Type: " + taskType);
+        var textNode = document.createTextNode(taskInput + " - " + dateString + "<br/> - Type: " + taskType);
         li.appendChild(textNode);
   
         // Assigning icon based on task type

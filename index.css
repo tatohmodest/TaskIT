@@ -758,7 +758,7 @@ top: 50%;
 transform: translateY(-50%);
 margin-right: 10px;
 justify-content: flex-end;
-left:300px;
+left:200px;
 top:20;
 }
 
@@ -848,7 +848,18 @@ footer {
   .tooltip {
       padding: 0.5em 2em; /* Adjust padding for smaller screens */
   }
-
+   .prompt-box, .task-type-box{
+    flex: 0 0 20%;
+    width: 240px;
+    height: 254px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    background: #fff;
+    border-radius: 20px;
+   }
   .tooltip .tooltiptext {
       width: 150px; /* Adjust width for smaller screens */
       padding: 8px; /* Adjust padding for smaller screens */
@@ -935,7 +946,8 @@ footer {
 
   footer {
       margin-top: 10px; /* Adjust margin for smaller screens */
-  }}
+  }
+}
 
 
 
