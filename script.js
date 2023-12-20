@@ -55,29 +55,37 @@ function addTask() {
         var newDate = new Date();
         var dateString = newDate.toISOString().replace('T', ' ').replace(/\.\d{3}Z$/, '');
         var li = document.createElement('li');
-        var textNode = document.createTextNode(taskInput + " - " + dateString + "<br/> - Type: " + taskType);
-        li.appendChild(textNode);
-  
+         //creating for the text
+         var task = document.createElement('div');
+         task.classList.add('task');
+       
+         
+
+        // createing the date
+        var date = document.createElement('div');
+        date.classList.add('time');
+        date.appendChild(document.createTextNode(dateString));
+      
         // Assigning icon based on task type
-        var iconClass = '';
+     var iconClass = '';
         switch (taskType) {
             case 'schooltask':
-                iconClass = 'material-symbols-outlined school';
+                iconClass = '<span class="material-symbols-outlined">school</span>';
                 break;
             case 'worktask':
-                iconClass = 'material-symbols-outlined business_center';
+                iconClass = '<span class="material-symbols-outlined">work</span>';
                 break;
             case 'gym':
-                iconClass = 'material-symbols-outlined fitness_center';
+                iconClass = '<span class="material-symbols-outlined">fitness_center</span>';
                 break;
             case 'home':
-                iconClass = 'material-symbols-outlined house';
+                iconClass = '<span class="material-symbols-outlined">home</span>';
                 break;
             case 'traveling':
-                iconClass = 'material-symbols-outlined flight_takeoff';
+                iconClass = '<span class="material-symbols-outlined">flight_takeoff</span>';
                 break;
             case 'sport':
-                iconClass = 'material-symbols-outlined sports_soccer';
+                iconClass = '<span class="material-symbols-outlined">sports_soccer</span>';
                 break;
             case 'personal':
                 iconClass = '<span class="material-symbols-outlined">settings_accessibility</span>';
@@ -85,32 +93,40 @@ function addTask() {
             default:
                 iconClass = 'default-icon';
         }
-        li.className = iconClass;
+        
+        task.innerHTML = `${taskInput}     ${iconClass}`
+
+       
+        li.appendChild(task);
+        li.appendChild(date);
   
         // Adding the li to the taskList
         var taskList = document.getElementById('taskview');
-  
+        var checkdiv = document.createElement('div');
+        checkdiv.classList.add('type')
         var checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.className = 'task-checkbox';
+        checkdiv.appendChild(checkbox)
         checkbox.addEventListener('change', function() {
           if (this.checked) {
-              li.style.backgroundColor = 'green';
+              checkdiv.style.backgroundColor = 'green';
               var completeText = document.createElement('div');
               completeText.appendChild(document.createTextNode('Task Complete'));
               completeText.className = 'complete-text';
               li.appendChild(completeText);
           } else {
-              li.style.backgroundColor = 'yellow';
+              checkdiv.style.backgroundColor = 'yellow';
               var completeText = li.querySelector('.complete-text');
               if (completeText) {
                   li.removeChild(completeText);
               }
           }
         });
-        li.insertBefore(checkbox, li.firstChild);
+      
+        li.insertBefore(checkdiv, li.firstChild);
         
-        taskList.appendChild(li);
+       
   
         // Clearing the input field
         document.getElementById('taskInput').value = '';
@@ -141,9 +157,9 @@ function addTask() {
 
 
         var updateBtn = document.createElement('button');
-updateBtn.appendChild(document.createTextNode('Update'));
-updateBtn.onclick = function() {
-    var text = li.firstChild;
+    updateBtn.appendChild(document.createTextNode('Update'));
+     updateBtn.onclick = function() {
+    var text = li.children[1];
     var input = document.createElement('input');
     input.type = 'text';
     input.value = text.textContent;
@@ -164,6 +180,7 @@ updateBtn.onclick = function() {
 };
 li.appendChild(updateBtn);
 }
+taskList.appendChild(li);
    
   }
   
