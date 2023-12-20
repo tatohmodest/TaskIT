@@ -241,6 +241,13 @@ background: #fff;
 border-radius: 20px;
  
 }
+.prompt-box:hover{
+  transform: scale(1.05);
+  border: 1px solid black;
+  width: 250px;
+  height: 258px;
+  transition: 0.2s ease;
+}
 #box1{
 
   background-image: url('/pics/bg3.png');
